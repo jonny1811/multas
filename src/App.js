@@ -1,25 +1,56 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Totales from './components/TotalesVotantes';
+import Consolidados from './components/Consolidados';
+import Presidente from './components/Presidente';
+import PresidenteConsolidado from './components/PresidenteConsolidado';
+import Senador from './components/Senador';
+import SenadorConsolidado from './components/SenadorConsolidado';
+import Gobernador from './components/Gobernador';
+import GobernadorConsolidado from './components/GobernadorConsolidado';
+import Parlasur from './components/Parlasur';
+import ParlasurConsolidado from './components/ParlasurConsolidado';
+import Diputado from './components/Diputado';
+import DiputadoConsolidado from './components/DiputadoConsolidado';
+import JuntaDepartamental from './components/JuntaDepartamental';
+import JuntaDepartamentalConsolidado from './components/JuntaDepartamentalConsolidado';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="row">
+        <div className="col-sm">
+
+          <div className="row">
+            <div className="col-sm">
+            <h1 className="center">Elecciones Generales</h1>
+            </div>
+          </div>
+
+          <div className="row border">
+            <div className="col-sm center"><Totales/></div>
+            <div className="col-sm center"><Consolidados/></div>
+          </div>
+
+          <div className="row border">
+            <div className="col-sm center"><Presidente/></div>
+            <div className="col-sm center"><PresidenteConsolidado/></div>
+          </div>
+
+          <div className="row border">
+            <div className="col-sm center"><Senador/></div>
+            <div className="col-sm center"><SenadorConsolidado/></div>
+          </div>
+
+          <div className="row">
+            <div className="col-sm center"><Gobernador/><br/><GobernadorConsolidado/></div>
+            <div className="col-sm center"><Parlasur/><br/><ParlasurConsolidado/></div>
+            <div className="col-sm center"><Diputado/><br/><DiputadoConsolidado/></div>
+            <div className="col-sm center"><JuntaDepartamental/><br/><JuntaDepartamentalConsolidado/></div>          
+          </div>
+
+        </div>
       </div>
     );
   }
