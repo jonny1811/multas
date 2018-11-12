@@ -50,7 +50,7 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        <h2>Gobernador Consolidado</h2>
+        <h4>Gobernador Consolidado</h4>
         <Doughnut height={100} data={this.state.chartData} />
       </div>
     )

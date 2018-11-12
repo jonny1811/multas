@@ -50,7 +50,7 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        <h2>Junta Departamental Consolidado</h2>
+        <h4>Junta Departamental Consolidado</h4>
         <Doughnut height={100} data={this.state.chartData} />
       </div>
     )

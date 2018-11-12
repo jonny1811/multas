@@ -56,7 +56,7 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        <h2>Gobernador</h2>
+        <h4>Gobernador</h4>
         <HorizontalBar height={100} options={options} data={this.state.chartData} />
       </div>
     )
