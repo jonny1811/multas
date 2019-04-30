@@ -15,6 +15,10 @@ const options = {
   }
 }
 
+function randomHex(){
+  return '#'+Math.floor(Math.random()*16777215).toString(16);
+}
+
 export default class extends React.Component {
   constructor(props){
     super(props);
@@ -24,7 +28,7 @@ export default class extends React.Component {
   }
 
   callApi = async () => {
-    const response = await fetch('http://143.255.143.102:3001/dashboard',{headers: {key: 'e9c4AtCp5khzw5Nt'}});
+    const response = await fetch('http://localhost:3001/dashboard',{headers: {key: 'e9c4AtCp5khzw5Nt'}});
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
     return body.data;
@@ -39,7 +43,7 @@ export default class extends React.Component {
             chartData: {
               labels: res[11].deputados.map(c=>c.apelido),
               datasets: [{
-                backgroundColor: '#CCCE56',
+                backgroundColor: [randomHex(), randomHex(), randomHex(), randomHex(), randomHex(), randomHex()] , //'#CCCE56',
                 borderColor: 'rgba(255,99,132,1)',
                 borderWidth: 1,
                 hoverBackgroundColor: '#AAA384',
@@ -56,9 +60,9 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        <h4>Diputado</h4>
+        {/* <h4>Diputado</h4>
         <HorizontalBar height={100} options={options} data={this.state.chartData} />
-      </div>
+ */}      </div>
     )
   }
 }

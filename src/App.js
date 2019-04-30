@@ -24,7 +24,7 @@ class App extends Component {
 
           <div className="row">
             <div className="col-sm">
-            <h1 className="center">Elecciones Generales</h1>
+            <h1 className="center">DashBoard Sistema Nacional de Multas</h1>
             </div>
           </div>
 
